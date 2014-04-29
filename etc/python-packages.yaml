@@ -1,0 +1,26 @@
+packages:
+  #########
+  nose: ##
+  #######
+    name: python nose
+    version: '1.3.1'
+    description: |
+      A framework to run unit tests and gather their results
+    url: https://nose.readthedocs.org/en/latest/
+    trees: '{assembly.trees.oss-dependencies}/lib/nose/{packages.nose.version}/noarch'
+    environment:
+      variables:
+        PYTHONPATH: '.'
+
+  #########
+  mock: ##
+  #######
+    name: python mock
+    version: '1.0.1'
+    description: |
+      A framework to help creating mock objects
+    url: http://www.voidspace.org.uk/python/mock/
+    trees: '{assembly.trees.oss-dependencies}/lib/mock/{packages.mock.version}/noarch'
+    environment:
+      variables:
+        PYTHONPATH: '.'
