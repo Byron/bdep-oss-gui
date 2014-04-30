@@ -1,4 +1,12 @@
 packages:
+  ###################
+  pgit-package:   ##
+  #################
+    # Confiure tree, and pull in configuration
+    trees: '{assembly.trees.oss-dependencies}/lib/pgit/{packages.pgit-package.version}/noarch'
+    version: 'latest'
+    configuration:
+      trees: etc
   #########
   nose: ##
   #######
@@ -24,3 +32,19 @@ packages:
     environment:
       variables:
         PYTHONPATH: '.'
+
+  ###############
+  git-python: ##
+  #############
+    name: git-python
+    trees: '{assembly.trees.oss-dependencies}/lib/git-python/{packages.git-python.version}/noarch'
+    description: |
+      Allows to use git from within python, following pythonic ways.
+    url: https://github.com/gitpython-developers/GitPython
+    # Just a marker, this parent repository is supposed to contain the right version
+    version: '0.3'
+    environment:
+      variables:
+        PYTHONPATH: '.'
+
+

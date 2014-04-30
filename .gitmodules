@@ -1,0 +1,8 @@
+[submodule "pgit-package"]
+	path = lib/pgit/latest/noarch
+	url = https://github.com/Byron/pgit
+	branch = master
+[submodule "git-python"]
+	path = lib/git-python/0.3/noarch
+	url = https://github.com/gitpython-developers/GitPython
+	branch = 0.3
