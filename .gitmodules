@@ -6,3 +6,11 @@
 	path = lib/git-python/0.3/noarch
 	url = https://github.com/gitpython-developers/GitPython
 	branch = 0.3
+[submodule "pyside"]
+	url = https://github.com/Byron/bdep-pyside
+	path = lib/pyside
+	branch = refs/heads/master
+[submodule "qt"]
+	url = https://github.com/Byron/bdep-qt
+	path = lib/qt
+	branch = refs/heads/master
