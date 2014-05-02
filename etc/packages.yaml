@@ -19,6 +19,21 @@ packages:
       variables:
         PYTHONPATH: '.'
 
+  ##############
+  pyqtgraph: ##
+  ############
+    name: PyQTGraph
+    version: 'latest'
+    description: |
+      A pyqt/pyside based graphing framework
+    url: https://github.com/pyqtgraph/pyqtgraph
+    trees: '{assembly.trees.oss-dependencies}/lib/pyqtgraph/{packages.pyqtgraph.version}/noarch'
+    requires: pyside
+    environment:
+      variables:
+        PYTHONPATH: '.'
+        PYQTGRAPH_EXAMPLES_PATH: 'examples'
+
   #########
   mock: ##
   #######
