@@ -30,23 +30,6 @@ packages:
         - -c
         - import nose; import sys; nose.main(argv = ['nosetests'] + sys.argv[1:])
 
-  ######################
-  pyqtgraph-example:  #
-  ####################
-    name: pyqtgraph example application
-    description: |
-      A simple utility to run pyqtgraph examples
-    requires:
-      - pyqtgraph
-      - python
-    alias: python
-    environment:
-      variables:
-        PYTHONPATH: '$PYQTGRAPH_EXAMPLES_PATH'
-    arguments:
-      prepend:
-        - -m
-
   ##############
   pyside-uic: #
   ############
