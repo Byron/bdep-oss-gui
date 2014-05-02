@@ -5,8 +5,7 @@ packages:
     # Confiure tree, and pull in configuration
     trees: '{assembly.trees.oss-dependencies}/lib/pgit/{packages.pgit-package.version}/noarch'
     version: 'latest'
-    configuration:
-      trees: etc
+    include: etc
   #########
   nose: ##
   #######
