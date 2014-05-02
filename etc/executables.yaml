@@ -3,11 +3,12 @@ packages:
   python: ##
   #########
     name: Python
-    version: '2.6'
+    version: '2.7'
     description: |
       The standard python interpreter
     url: https://www.python.org
     trees:
+      - '/opt/local/bin'
       - '/usr/bin'
       - 'c:\Python{packages.python.version.major}{packages.python.version.minor}'
     executable: 'python{packages.python.version}'
@@ -28,4 +29,33 @@ packages:
       prepend:
         - -c
         - import nose; import sys; nose.main(argv = ['nosetests'] + sys.argv[1:])
+
+  ##############
+  pyside-uic: #
+  ############
+    name: PySide UI Compiler
+    description: |
+      Compile .ui files into python modules
+    url: https://github.com/PySide
+    requires:
+      - python
+      - pyside
+    alias: python
+    arguments:
+      resolve: 1
+      prepend:
+        - '$PYSIDE_BIN_PATH/pyside-uic'
+
+  ##############
+  pyside-rcc: #
+  ############
+    name: PySide Resource Compiler
+    description: |
+      Compile .rc files into python modules, packing all resources into one file in the process
+    url: https://github.com/PySide
+    requires:
+      - python
+      - pyside
+    executable: '$PYSIDE_BIN_PATH/pyside-rcc'
+
 

@@ -47,4 +47,39 @@ packages:
       variables:
         PYTHONPATH: '.'
 
+  ###########
+  pyside: ##
+  #########
+    name: PySide
+    trees: '{assembly.trees.oss-dependencies}/lib/pyside/{packages.pyside.version}/{platform.id}'
+    description: |
+       The PySide project provides LGPL-licensed Python bindings for the Qt. It also includes complete toolchain for rapidly generating bindings for any Qt-based C++ class hierarchies
+    url: https://github.com/PySide
+    # Just a marker, this parent repository is supposed to contain the right version
+    version: '1.2.2'
+    requires:
+     - qt4
+     - python
+    environment:
+      linker_search_paths:
+        - lib
+        - 'lib/python{packages.python.version.major}.{packages.python.version.minor}/site-packages'
+      executable_search_paths: bin
+      variables:
+        PYTHONPATH:
+         - 'lib/python{packages.python.version.major}.{packages.python.version.minor}/site-packages'
+        PYSIDE_BIN_PATH: 'bin'
+
+  ########
+  qt4: ##
+  ######
+    name: QT4
+    trees: '{assembly.trees.oss-dependencies}/lib/qt/{packages.qt4.version}/{platform.id}'
+    description: |
+       A great application framework, which can also show pretty widgets.
+    url: https://github.com/PySide
+    # Just a marker, this parent repository is supposed to contain the right version
+    version: '4.8.6'
+    environment:
+      linker_search_paths: lib
 

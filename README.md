@@ -8,6 +8,8 @@ A dependency in our sense of the word is a python or c/c++ library for the sole 
 
 We depend on the following variable to be set within the yaml settings: `assembly.trees.oss-dependencies`. It is set by either `bdevel` or `bdistribution` to point to our respective root.
 
+Additionally, `platform.id` must be set to the name of the platform.
+
 The reason for this is that we want to be easily integrated, either to be part of another assembly, or to live side-by-side, whatever fits best to the respective user.
 
 ## Directory Structure
