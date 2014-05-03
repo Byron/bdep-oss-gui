@@ -1,9 +1,9 @@
 #!/bin/bash
 # primarliy taken from here: https://github.com/PySide/pyside-setup#pyside-setup-script-command-line-options
 
-version=${1?:need the pyside version, like 1.2.2}
-platform=${2?:name of the platform we are installing for. Should be specific, like os-10.9}
-qmake_path=${3?:path to the qmake to tell pyside to which qt version to build against, like /usr/local/Trolltech/Qt-4.8.6/bin/qmake}
+version=${1?need the pyside version, like 1.2.2}
+platform=${2?name of the platform we are installing for. Should be specific, like os-10.9}
+qmake_path=${3?path to the qmake to tell pyside to which qt version to build against, like /usr/local/Trolltech/Qt-4.8.6/bin/qmake}
 
 pip_dest=pyside-setup-tmp
 

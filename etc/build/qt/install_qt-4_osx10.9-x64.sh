@@ -1,8 +1,8 @@
 #!/bin/bash
 
-source_dir=${1?:need the installation directory, like /usr/local/Trolltech/Qt-4.8.6}
-version=${2?:need the qt version, like 4.8.6}
-platform=${3?:name of the platform we are installing for. Should be specific, like os-10.9}
+source_dir=${1?need the installation directory, like /usr/local/Trolltech/Qt-4.8.6}
+version=${2?need the qt version, like 4.8.6}
+platform=${3?name of the platform we are installing for. Should be specific, like os-10.9}
 
 [ -d etc/sublime-text ] || { echo "CWD must be the root of bdep-oss" && exit 2; }
 
