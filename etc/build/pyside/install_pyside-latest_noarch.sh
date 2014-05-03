@@ -52,4 +52,15 @@ rm -Rfv $pyside_dir/share
 cd ..
 rm -Rfv $pip_dest
 
+if [ -z "$HOMEDRIVE" ]; then
+	# on windows, or some reason, it doens't put the python version. It's a very good idea to do that !
+	# WTF ?
+	echo "Warning: untested - remove this message if it works"
+	version=`$python --version`
+	version=${version#* }
+	pydir=$pyside_dir/lib/python$version	
+	mkdir $pydir
+	mv $pyside_dir/lib/site-packages $pydir
+fi
+
 echo "Files placed at $pyside_dir"
