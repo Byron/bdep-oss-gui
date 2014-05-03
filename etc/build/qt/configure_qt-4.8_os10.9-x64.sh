@@ -5,10 +5,13 @@
 [ -x ./configure ] || { echo "must be in qt source directory" && exit 2; }
 
 echo "configuring qt"
-./configure -no-framework -arch x86_64 -no-rpath  -largefile -system-proxies -fast -shared -opensource -nomake examples -nomake demos -nomake docs -no-qt3support -release
+if [ `uname` = Darwin ]; then
+	add_args="-no-framework"
+fi
+./configure $add_args -arch x86_64 -no-rpath  -largefile -system-proxies -fast -shared -opensource -nomake examples -nomake demos -nomake docs -no-qt3support -release || exit $?
 
 echo "--> Now build and install using the following commands"
-echo make -j8
-echo sudo make install
+echo make -j8 || exit $?
+echo sudo make install || exit $?
 echo 
 echo "next step is to cd into the bdep-oss root and run the install script"

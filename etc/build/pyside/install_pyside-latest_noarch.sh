@@ -11,7 +11,7 @@ echo "This installer works by downloading the latest source, putting it locally,
 echo "It will need cmake and git to work"
 echo "BE SURE TO READ ABOUT PREREQUISITES ON https://github.com/PySide/pyside-setup"
 echo "ON WINDOWS, YOU MUST BE IN A VC DEVELOPER SHELL"
-[ -d etc/sublime-text ] || { echo "CWD must be the root of bdep-oss" && exit 2; }
+# [ -d etc/sublime-text ] || { echo "CWD must be the root of bdep-oss" && exit 2; }
 [ -x $qmake_path ] || { echo "qmake at $qmake_path is not executable" && exit 2; }
 
 # make sure shiboken will work
@@ -20,8 +20,10 @@ export DYLD_LIBRARY_PATH=$ld_path
 # let's do all posix 
 export LD_LIBRARY_PATH=$ld_path
 # and ... yeah 
-dll_path=`dirname $qmake_path`/../bin
-export PATH=$PATH;$dll_path
+if [ -z "$HOMEDRIVE" ]; then
+	dll_path=`dirname $qmake_path`/../bin
+	export PATH=$PATH;$dll_path
+fi
 
 pyside_dir=lib/pyside/$version/$platform
 mkdir -p $pyside_dir || exit $?
@@ -52,7 +54,7 @@ rm -Rfv $pyside_dir/share
 cd ..
 rm -Rfv $pip_dest
 
-if [ -z "$HOMEDRIVE" ]; then
+if [ -n "$HOMEDRIVE" ]; then
 	# on windows, or some reason, it doens't put the python version. It's a very good idea to do that !
 	# WTF ?
 	echo "Warning: untested - remove this message if it works"
@@ -63,4 +65,5 @@ if [ -z "$HOMEDRIVE" ]; then
 	mv $pyside_dir/lib/site-packages $pydir
 fi
 
+echo "ON LINUX: move python2.x from lib64 into for the package to look as expected. We can consider leaving packages as they are, and make it work through our configuration"
 echo "Files placed at $pyside_dir"
