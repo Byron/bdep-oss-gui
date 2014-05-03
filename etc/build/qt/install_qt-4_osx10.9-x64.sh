@@ -16,4 +16,5 @@ cp -Rv $source_dir/lib $qt_dir || exit $?
 echo "cleaning up ... "
 rm -Rfv $qt_dir/lib/pkgconfig $qt_dir/lib/*debug* $qt_dir/lib/*.la $qt_dir/lib/*.prl $qt_dir/lib/*.a
 
+echo "keep the source files at $source_dir around for the pyside build later on"
 echo "installation finished to $qt_dir"
