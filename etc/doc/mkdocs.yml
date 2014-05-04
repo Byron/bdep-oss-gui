@@ -1,9 +1,9 @@
-site_name: bdep-oss
-site_url: https://byron.github.io/bdep-oss
-site_description: Open-Source Depedencies - commandline compatible
+site_name: bdep-oss-gui
+site_url: https://byron.github.io/bdep-oss-gui
+site_description: Open-Source Depedencies - for graphical user interfaces
 
-repo_url: https://github.com/Byron/bdep-oss
-dev_addr: 127.0.0.1:9992
+repo_url: https://github.com/Byron/bdep-oss-oss
+dev_addr: 127.0.0.1:9993
 
 docs_dir: ../..
 site_dir: ../../doc/mkdocs/html

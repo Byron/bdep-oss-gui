@@ -1,35 +1,4 @@
 packages:
-  ###########
-  python: ##
-  #########
-    name: Python
-    version: '2.7'
-    description: |
-      The standard python interpreter
-    url: https://www.python.org
-    trees:
-      - '/opt/local/bin'
-      - '/usr/bin'
-      - 'c:\Python{packages.python.version.major}{packages.python.version.minor}'
-    executable: 'python{packages.python.version}'
-
-  #############
-  nosetests: #
-  ###########
-    name: nosetests
-    description: |
-      A runner for python unit tests
-    url: https://nose.readthedocs.org/en/latest/
-    requires:
-      - python
-      - nose
-    alias: python
-    arguments:
-      # Just for testing ...
-      prepend:
-        - -c
-        - import nose; import sys; nose.main(argv = ['nosetests'] + sys.argv[1:])
-
   ##############
   pyside-uic: #
   ############

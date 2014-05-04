@@ -3,7 +3,3 @@ packages:
     # we have been lazy and didn't compile the latest version ourselves, 
     # so the best we have is this one.
     version: '4.8.4'
-  python:
-    # on windows, it's just that
-    executable: python
-        
