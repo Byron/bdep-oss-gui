@@ -5,7 +5,7 @@ site_description: Open-Source Depedencies - for graphical user interfaces
 repo_url: https://github.com/Byron/bdep-oss-oss
 dev_addr: 127.0.0.1:9993
 
-docs_dir: ../..
+docs_dir: ../../src/md
 site_dir: ../../doc/mkdocs/html
 
 pages:
