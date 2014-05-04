@@ -3,7 +3,7 @@ packages:
   pyside: ##
   #########
     name: PySide
-    trees: '{assembly.trees.oss-dependencies}/lib/pyside/{packages.pyside.version}/{platform.id}'
+    trees: '{assembly.trees.oss-gui-dependencies}/lib/pyside/{packages.pyside.version}/{platform.id}'
     description: |
        The PySide project provides LGPL-licensed Python bindings for the Qt. It also includes complete toolchain for rapidly generating bindings for any Qt-based C++ class hierarchies
     url: https://github.com/PySide
@@ -26,7 +26,7 @@ packages:
   qt4: ##
   ######
     name: QT4
-    trees: '{assembly.trees.oss-dependencies}/lib/qt/{packages.qt4.version}/{platform.id}'
+    trees: '{assembly.trees.oss-gui-dependencies}/lib/qt/{packages.qt4.version}/{platform.id}'
     description: |
        A great application framework, which can also show pretty widgets.
     url: https://github.com/PySide
