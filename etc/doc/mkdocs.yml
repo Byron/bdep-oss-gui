@@ -1,0 +1,17 @@
+site_name: bdep-oss
+site_url: https://byron.github.io/bdep-oss
+site_description: Open-Source Depedencies - commandline compatible
+
+repo_url: https://github.com/Byron/bdep-oss
+dev_addr: 127.0.0.1:9992
+
+docs_dir: ../..
+site_dir: ../../doc/mkdocs/html
+
+pages:
+- ['index.md', 'Home']
+- ['LICENSE.md', 'About', 'License']
+
+theme: yeti
+
+copyright: Copyright &copy; 2014, <a href="https://www.linkedin.com/in/sebastianthiel">Sebastian Thiel & Contributors</a>.
