@@ -4,7 +4,7 @@ packages:
   #########
     name: PySide
     platform: '{platform.id}'
-    trees: '{settings-files.bdep-oss-gui-packages.dirname}/../lib/pyside/{packages.pyside.version}/{packages.pyside.platform}'
+    trees: '{yaml.bdep-oss-gui-packages.dirname}/../lib/pyside/{packages.pyside.version}/{packages.pyside.platform}'
     description: |
        The PySide project provides LGPL-licensed Python bindings for the Qt. It also includes complete toolchain for rapidly generating bindings for any Qt-based C++ class hierarchies
     url: https://github.com/PySide
@@ -28,7 +28,7 @@ packages:
   ######
     name: QT4
     platform: '{platform.id}'
-    trees: '{settings-files.bdep-oss-gui-packages.dirname}/../lib/qt/{packages.qt4.version}/{packages.qt4.platform}'
+    trees: '{yaml.bdep-oss-gui-packages.dirname}/../lib/qt/{packages.qt4.version}/{packages.qt4.platform}'
     description: |
        A great application framework, which can also show pretty widgets.
     url: https://github.com/PySide
